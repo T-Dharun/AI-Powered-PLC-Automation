@@ -1,3 +1,6 @@
+#chat{
+    color: var(--text);
+}
 .chat-section-box{
     scrollbar-width: none;
     overflow: scroll;
@@ -5,6 +8,8 @@
 .chat-input{
     outline: none;
     border-radius: 0.25em;
+    background-color: var(--border-reduce);
+    color: var(--text);
     border: 1px solid rgb(156, 156, 156);
 }
 .user-prompt{
@@ -12,21 +17,21 @@
     overflow-wrap: break-word;
 }
 .chat-head{
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid var(--border);
 }
-.chat-user-message{
-    background-color: whitesmoke;
-    color: rgb(54, 54, 54);
+    .chat-user-message{
+    color:var(--text);
+    background-color: var(--border-reduce);
     border-radius: 0.5em;
-    border: 1px solid gainsboro;
+    border: 1px solid var(--border-reduce);
 }
 .editor-language,
 .editor-container{
-    border: 1px solid lightgray;
+    border: 1px solid var(--border);
 }
 .multi-code-container{
-    background-color: rgb(224, 224, 224);
-    color: rgb(83, 83, 83);
+    background-color:var(--border-reduce);
+    color:var(--text);
     border-radius: 0.25em;
     cursor: pointer;
 }
@@ -35,25 +40,24 @@
     text-align: center;
     padding: 0.5em 1em;
     width: 10em;
-    transition: background-color 0.5s;
     border-radius: 0.5em;
 }
 .code-active{
-    background-color: white;
+    background-color: var(--primary-color);
+    color: var(--text);
 }
 .editor-execution{
-    background-color: rgb(224, 224, 224);
-    color: rgb(83, 83, 83);
     border-radius: 0.25em;
     cursor: pointer;
 }
 .execute-st{
-    color: black;
-    background-color: lightgrey;
+    color: var(--text);
+    background-color: var(--border-reduce);
 }
 .download-toggle,
 .execute-st:hover{
-    background-color: rgb(194, 194, 194);
+    background-color: rgb(75, 75, 75);
+    color: var(--secondary-color);
 }
 .dr-item-color{
     background-color: blue;

@@ -1,10 +1,10 @@
 .navbar-container{
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--border);
 }
 
 .work-chat,
 .work-editor{
-    border: 1px solid rgb(201, 201, 201);
+    border: 1px solid var(--border);
     padding: 1em;
     border-radius: 0.5em;
 }

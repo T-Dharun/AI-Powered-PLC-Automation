@@ -1,0 +1,25 @@
+
+:root{
+    --primary-color: whitesmoke;
+    --secondary-color: grey;
+    --border:grey;
+    --border-reduce:rgba(128, 128, 128, 0.342);
+    --text:white,
+}
+[data-theme="light"] {
+    --primary-color: white;
+    --secondary-color:grey;
+    --text:black;
+    background-color:white;
+  }
+  
+  [data-theme="dark"] {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --text:white;
+    --border:rgb(107, 107, 107);
+    --border-reduce:rgba(128, 128, 128, 0.342);
+    background-color:black;
+    
+  }
+  

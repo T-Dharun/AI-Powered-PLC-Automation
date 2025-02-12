@@ -4,12 +4,14 @@ import { tokenize, parseTokens } from "../../utils/stParser";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 import "./workspace.css";
+import { useTheme } from "../theme/ThemeContext";
 
 const Editor = ({ stCode, setStCode }) => {
     const [ast, setAst] = useState(null);
     const [error, setError] = useState(null);
     const [language, setLanguage] = useState(true);
     const [show, setShow] = useState(false);
+    const { theme, toggleTheme } = useTheme();
     const handleDownload = (name, file, format) => {
         const text = file;
         const blob = new Blob([text], { type: "text/plain" });
@@ -48,7 +50,7 @@ const Editor = ({ stCode, setStCode }) => {
                 <section className="d-flex align-items-center editor-execution">
                     <div className="execute-st p-2 px-3" onClick={handleCompile}>Execute</div>
                     <div className="btn-group">
-                        <div className=" dropdown-toggle download-toggle py-2 px-3" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div className=" dropdown-toggle download-toggle text-light py-2 px-3" data-bs-toggle="dropdown" aria-expanded="false">
                         </div>
                         <ul className="dropdown-menu my-3">
                             <li><a className="dropdown-item dr-item-color" onClick={() => handleDownload("stcode", stCode, "st")}>ST Code</a></li>
@@ -63,7 +65,7 @@ const Editor = ({ stCode, setStCode }) => {
                     <div className="editor-container pt-2 h-100">
                         <MonacoEditor
                             language="plaintext"
-                            theme="vs-light"
+                            theme={theme === "light" ? "vs-light" : "vs-dark"}
                             height="600px"
                             value={stCode}
                             onChange={setStCode}
@@ -71,19 +73,6 @@ const Editor = ({ stCode, setStCode }) => {
                         />
                     </div> : <div className="editor-container ll-container">Stay Tuned !! Coming Soon ...</div>
             }
-            {/* <button onClick={handleCompile} style={{ padding: "10px", cursor: "pointer", background: "lightgrey", color: "black", border: "none" }}>
-                Convert to AST
-            </button> */}
-            {/* {error && <div style={{ color: "red" }}>{error}</div>} */}
-            {/* {ast && (
-                <div>
-
-                    <h3>Abstract Syntax Tree (AST)</h3>
-                    <pre style={{ background: "#fff", padding: "10px", color: "black" }}>
-                        {JSON.stringify(ast, null, 4)}
-                    </pre>
-                </div>
-            )} */}
             {show && (
                 <div className="modal show d-block compilation-display" tabIndex="-1">
                     <div className="modal-dialog modal-dialog-centered">
@@ -123,14 +112,14 @@ const Editor = ({ stCode, setStCode }) => {
                             <div className="modal-footer">
                                 <button
                                     type="button"
-                                    className="btn btn-danger"
+                                    className="btn btn-danger py-2 px-4"
                                     onClick={() => setShow(false)}
                                 >
                                     Close
                                 </button>
-                                <button type="button" className="btn btn-dark" onClick={() => setShow(false)}>
-                                    Save changes
-                                </button>
+                                {!error && <button type="button" className="btn btn-success py-2 px-4" onClick={() => setShow(false)}>
+                                    Deploy
+                                </button>}
                             </div>
                         </div>
                     </div>

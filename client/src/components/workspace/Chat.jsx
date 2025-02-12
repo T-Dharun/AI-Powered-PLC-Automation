@@ -38,7 +38,6 @@ const Chat = ({ stCode, setStCode }) => {
                 return updatedHistory;
             });
         }
-        console.log(history)
         setPrompt('');
     }
 
@@ -51,7 +50,7 @@ const Chat = ({ stCode, setStCode }) => {
                         history.length != 0 && history.map((item, index) => {
                             return (
                                 <div key={index} className="text-start  d-flex flex-column gap-2 ">
-                                    <div className="h-100 d-flex chat-user-message bg-light px-3 py-2">
+                                    <div className="h-100 d-flex chat-user-message px-3 py-2">
                                         <div className="p-2">
                                             <img src={user} width={"30px"} />
                                         </div>
