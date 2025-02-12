@@ -1,0 +1,92 @@
+.chat-section-box{
+    scrollbar-width: none;
+    overflow: scroll;
+}
+.chat-input{
+    outline: none;
+    border-radius: 0.25em;
+    border: 1px solid rgb(156, 156, 156);
+}
+.user-prompt{
+    width:calc(85% - 1em);
+    overflow-wrap: break-word;
+}
+.chat-head{
+    border-bottom: 1px solid lightgray;
+}
+.chat-user-message{
+    background-color: whitesmoke;
+    color: rgb(54, 54, 54);
+    border-radius: 0.5em;
+    border: 1px solid gainsboro;
+}
+.editor-language,
+.editor-container{
+    border: 1px solid lightgray;
+}
+.multi-code-container{
+    background-color: rgb(224, 224, 224);
+    color: rgb(83, 83, 83);
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+.multi-code{
+    font-size: 0.9em;
+    text-align: center;
+    padding: 0.5em 1em;
+    width: 10em;
+    transition: background-color 0.5s;
+    border-radius: 0.5em;
+}
+.code-active{
+    background-color: white;
+}
+.editor-execution{
+    background-color: rgb(224, 224, 224);
+    color: rgb(83, 83, 83);
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+.execute-st{
+    color: black;
+    background-color: lightgrey;
+}
+.download-toggle,
+.execute-st:hover{
+    background-color: rgb(194, 194, 194);
+}
+.dr-item-color{
+    background-color: blue;
+}
+.compilation-display{
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.compilation-body{
+    height: 100%;
+}
+.message-description{
+    text-align: center;
+    padding-bottom: 1em;
+}
+.result-danger{
+    color: rgb(204, 0, 0);
+    font-size: large;
+    font-weight: 500;
+}
+.result-success{
+    color: rgb(0, 173, 0);
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.ll-container{
+    padding-block: 5em;
+    height: 610px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: center;
+    color: #81a77a;
+}

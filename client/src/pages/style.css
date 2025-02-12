@@ -1,0 +1,28 @@
+.navbar-container{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.work-chat,
+.work-editor{
+    border: 1px solid rgb(201, 201, 201);
+    padding: 1em;
+    border-radius: 0.5em;
+}
+.work-chat{
+    width: 30%;
+}
+.work-editor{
+    width: 70%;
+}
+.ws-container{
+    height: 47em;
+    max-width: 100em;
+    gap: 1.5em;
+}
+@media  (max-width: 998px) {
+    .work-editor,
+    .work-chat{
+        width: 100%;
+    }
+    
+}
