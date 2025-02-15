@@ -1,89 +1,123 @@
-#chat{
+#chat {
     color: var(--text);
 }
-.chat-section-box{
+
+.chat-section-box {
     scrollbar-width: none;
     overflow: scroll;
 }
-.chat-input{
-    outline: none;
+
+.chat-input {
+    outline: 0px;
     border-radius: 0.25em;
-    background-color: var(--border-reduce);
     color: var(--text);
-    border: 1px solid rgb(156, 156, 156);
+    border: 1px solid var(--border);
 }
-.user-prompt{
-    width:calc(85% - 1em);
+.chat-input:focus{
+    outline: 1px solid var(--border-reduce);
+}
+.user-space {
+    background-color: var(--shadow);
+}
+
+.user-prompt {
+    width: calc(85% - 1em);
     overflow-wrap: break-word;
 }
-.chat-head{
+
+.chat-head {
     border-bottom: 1px solid var(--border);
 }
-    .chat-user-message{
-    color:var(--text);
+
+.chat-user-message {
+    color: var(--text);
     background-color: var(--border-reduce);
     border-radius: 0.5em;
     border: 1px solid var(--border-reduce);
 }
+
+.editor-container {
+    border: 1px solid var(--border);
+    border-radius: 0.5em;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .editor-language,
-.editor-container{
+.editor-container {
     border: 1px solid var(--border);
 }
-.multi-code-container{
-    background-color:var(--border-reduce);
-    color:var(--text);
+
+.multi-code-container {
+    background-color: var(--border-reduce);
+    color: var(--text);
     border-radius: 0.25em;
     cursor: pointer;
+
 }
-.multi-code{
+
+.multi-code {
     font-size: 0.9em;
     text-align: center;
     padding: 0.5em 1em;
     width: 10em;
     border-radius: 0.5em;
 }
-.code-active{
+
+.code-active {
     background-color: var(--primary-color);
     color: var(--text);
 }
-.editor-execution{
+
+.editor-execution {
     border-radius: 0.25em;
     cursor: pointer;
 }
-.execute-st{
+
+.execute-st {
     color: var(--text);
     background-color: var(--border-reduce);
 }
+
 .download-toggle,
-.execute-st:hover{
+.execute-st:hover {
     background-color: rgb(75, 75, 75);
     color: var(--secondary-color);
 }
-.dr-item-color{
+
+.dr-item-color {
     background-color: blue;
 }
-.compilation-display{
+
+.compilation-display {
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.5);
 }
-.compilation-body{
+
+.compilation-body {
     height: 100%;
 }
-.message-description{
+
+.message-description {
     text-align: center;
     padding-bottom: 1em;
 }
-.result-danger{
+
+.result-danger {
     color: rgb(204, 0, 0);
     font-size: large;
     font-weight: 500;
 }
-.result-success{
+
+.result-success {
     color: rgb(0, 173, 0);
     font-size: 1.5em;
     font-weight: 500;
 }
-.ll-container{
+
+.ll-container {
     padding-block: 5em;
     height: 610px;
     align-items: center;

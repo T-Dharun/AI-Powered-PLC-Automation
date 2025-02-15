@@ -3,21 +3,22 @@ import { useTheme } from "../theme/ThemeContext.jsx";
 import light from "../../assets/light-theme.svg";
 import dark from "../../assets/dark-theme.svg";
 import "./Navbar.css";
+
 const Navbar = () => {
     const { theme, toggleTheme } = useTheme();
     return (
         <>
-            <nav className="navbar p-3">
-                <section className="d-flex align-items-center gap-5">
-                    <h3 className="fw-bold m-0">ThinkPLC</h3>
+            <nav className="p-3 flex justify-between items-center navbar">
+                <section className="flex items-center gap-5">
+                    <h2 className="font-bold m-0">ThinkPLC</h2>
                     
-                    <section className="d-none d-md-block">
-                        <div className="d-flex px-3">
+                    <section className="hidden md:block">
+                        <div className="flex px-3">
                             {
                                 navData.map((item) => {
                                     return (
-                                        <Link to={item.url} key={item.id} className="text-decoration-none text-reset">
-                                            <div className="navbar-items fs-6 px-3" key={item.id}>{item.title}</div>
+                                        <Link to={item.url} key={item.id} className="no-underline text-current">
+                                            <div className="navbar-items text-lg px-3" key={item.id}>{item.title}</div>
                                         </Link>
                                     )
                                 })
@@ -25,19 +26,18 @@ const Navbar = () => {
                         </div>
                     </section>
                 </section>
-                <section className="d-flex align-items-center gap-2">
+                <section className="flex items-center gap-2">
                     <button onClick={toggleTheme} className="theme-button">
-                        <img src={theme === "light" ? dark: light} className="theme-image"/>
+                        <img src={theme === "light" ? dark : light} className="theme-image"/>
                     </button>
-                    <button className="nav-button btn btn-light sign-in">SignIn</button>
-                    <button className="nav-button btn btn-dark get-started">Get Started</button>
+                    <button className="nav-button bg-white text-black px-4 py-2 rounded">Sign In</button>
+                    <button className="nav-button bg-black text-white px-4 py-2 rounded">Get Started</button>
                 </section>
             </nav>
         </>
     );
 }
 export default Navbar;
-
 
 const navData = [
     {

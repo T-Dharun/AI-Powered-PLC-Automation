@@ -1,9 +1,10 @@
 .navbar{
-    width: 100em;
+    width: min(100%,85em);
     align-items: center;
     cursor: pointer;
     background-color: var(--primary-color);
     color: var(--text);
+    max-height: 3em;
 }
 .navbar-items{
     text-decoration: none;
