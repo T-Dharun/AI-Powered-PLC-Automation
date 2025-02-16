@@ -10,7 +10,7 @@ const Navbar = () => {
         <>
             <nav className="p-3 flex justify-between items-center navbar">
                 <section className="flex items-center gap-5">
-                    <h2 className="font-bold m-0">ThinkPLC</h2>
+                    <h2 className="font-bold text-lg m-0">ThinkPLC</h2>
                     
                     <section className="hidden md:block">
                         <div className="flex px-3">
@@ -18,7 +18,7 @@ const Navbar = () => {
                                 navData.map((item) => {
                                     return (
                                         <Link to={item.url} key={item.id} className="no-underline text-current">
-                                            <div className="navbar-items text-lg px-3" key={item.id}>{item.title}</div>
+                                            <div className="navbar-items text-md px-3" key={item.id}>{item.title}</div>
                                         </Link>
                                     )
                                 })
@@ -30,8 +30,10 @@ const Navbar = () => {
                     <button onClick={toggleTheme} className="theme-button">
                         <img src={theme === "light" ? dark : light} className="theme-image"/>
                     </button>
-                    <button className="nav-button bg-white text-black px-4 py-2 rounded">Sign In</button>
-                    <button className="nav-button bg-black text-white px-4 py-2 rounded">Get Started</button>
+                    <button className="nav-button bg-white text-black px-4 py-2 rounded sign-in">Profile</button>
+                    <Link to={"/"}>
+                    <button className="nav-button bg-black text-white px-4 py-2 rounded cursor:pointer get-started">Logout</button>
+                    </Link>
                 </section>
             </nav>
         </>
