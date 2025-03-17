@@ -1,0 +1,12 @@
+.home{
+    background-color: #111827;
+}
+.home-page-nav{
+    width: 100%;
+    border-bottom: 1px solid rgb(114, 114, 114);
+    background-color: #11182793;
+    backdrop-filter: blur(10px);
+}
+.home-workflow{
+    background: linear-gradient(#1F2836,#121928);
+}

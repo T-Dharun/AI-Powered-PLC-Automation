@@ -1,7 +1,11 @@
 .navbar{
-    width: 100em;
+    width: min(100%,85em);
     align-items: center;
     cursor: pointer;
+    background-color: var(--primary-color);
+    font-weight: 1px;
+    color: var(--text);
+    max-height: 3em;
 }
 .navbar-items{
     text-decoration: none;
@@ -16,9 +20,31 @@
     height: 100%;
 }
 .get-started{
-    background-color: rgb(54, 54, 54);
-    color: white;
+    background-color: var(--border-reduce);
+    color: var(--text);
 }
 .sign-in{
-    border: 1px solid rgb(192, 192, 192);
+    border: 1px solid var(--border);
+    background-color: var(--primary-color);
+    color:var(--text);
+}
+.get-started:hover{
+    opacity: 0.8;
+}
+.sign-in:hover{
+    background-color: var(--shadow);
+}
+.theme-image{
+    height: 1.5em;
+}
+.theme-button{
+    background-color: transparent;
+    border: 1px solid var(--border-reduce);
+    padding: 0.5em;
+    border-radius: 0.25em;
+    margin-inline: 0.5em;
+}
+.navbar-home{
+    width: min(100vw, 90em);
+    color: white;
 }

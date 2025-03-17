@@ -12,13 +12,15 @@
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.13.0",
     "@monaco-editor/react": "^4.6.0",
+    "@tailwindcss/vite": "^4.0.6",
     "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
     "monaco-editor": "^0.52.2",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.1.5"
+    "react-router-dom": "^7.1.5",
+    "tailwindcss": "^4.0.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

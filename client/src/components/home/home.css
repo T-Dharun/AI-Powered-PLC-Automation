@@ -1,0 +1,26 @@
+.project-title{
+    font-size: 4em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff6b6b, #ffb86c, #50fa7b);
+    -webkit-background-clip: text;
+    padding-bottom: 3em;
+    -webkit-text-fill-color: transparent;
+}
+.workflow{
+    width: min(100vw, 90em);
+    
+}
+.workflow-card{
+    padding: 3em 2em;
+    border-radius: 0.5em;
+    background-color: #1F2937;
+    border: 1px solid #454d58;
+    color: #69788b;
+}
+.icon-work{
+    background: linear-gradient(45deg,rgb(255, 99, 234),rgb(169, 94, 255));
+    box-shadow: 0px 0px 25px 0px rgb(111, 0, 255);
+    height: 1.5em;
+    border-radius: 5px;
+    width: 1.5em;
+}

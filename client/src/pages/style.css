@@ -1,12 +1,16 @@
-.navbar-container{
-    border-bottom: 1px solid #e0e0e0;
+.navbar-workspace{
+    width: 100%;
+    position: absolute;
+    border-bottom: 1px solid var(--border);
+    padding: 0.75em;
 }
-
 .work-chat,
 .work-editor{
-    border: 1px solid rgb(201, 201, 201);
+    border: 0.1px solid var(--border);
     padding: 1em;
+    padding-bottom: 1.5em;
     border-radius: 0.5em;
+    box-shadow: 0px 0px 5px 0px var(--border-reduce);
 }
 .work-chat{
     width: 30%;
@@ -14,15 +18,27 @@
 .work-editor{
     width: 70%;
 }
+.workspace-container{
+    height: 100svh;
+    padding-top: 3em;
+}
 .ws-container{
-    height: 47em;
-    max-width: 100em;
+    height: min(45em,90svh);
+    padding-inline: 2em;
+    padding-block: 1em;
+    max-width: 90em;
     gap: 1.5em;
+}
+
+
+.navbar-home{
+    width:100hw;
 }
 @media  (max-width: 998px) {
     .work-editor,
     .work-chat{
         width: 100%;
     }
+
     
 }

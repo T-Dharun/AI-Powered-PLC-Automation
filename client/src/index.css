@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root{
+    --primary-color: whitesmoke;
+    --secondary-color:#f3f7ff;
+    --border:rgb(197, 197, 197);
+    --border-reduce:rgba(128, 128, 128, 0.342);
+    --text:white;
+}
+[data-theme="light"] {
+    --primary-color: white;
+    --text:black;
+    --shadow:rgb(243, 243, 243);      
+    background-color:white;
+  }
+  
+  [data-theme="dark"] {
+    --primary-color: #111827;
+    --secondary-color:#cedeff;
+    --text:rgb(252, 252, 252);
+    --shadow:#111e3a;      
+    --border:#383e47;
+    --border-reduce:#000000;
+    background-color:#111827;
+    
+  }
+  

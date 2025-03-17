@@ -1,85 +1,104 @@
-.chat-section-box{
+#chat {
+    color: var(--text);
+}
+
+.chat-section-box {
     scrollbar-width: none;
     overflow: scroll;
 }
-.chat-input{
-    outline: none;
+
+.chat-input {
+    outline: 0px;
     border-radius: 0.25em;
-    border: 1px solid rgb(156, 156, 156);
+    color: var(--text);
+    border: 1px solid var(--border);
 }
-.user-prompt{
-    width:calc(85% - 1em);
+.chat-input:focus{
+    outline: 1px solid var(--border-reduce);
+}
+.user-space {
+    background-color: var(--shadow);
+}
+
+.user-prompt {
+    width: calc(85% - 1em);
     overflow-wrap: break-word;
 }
-.chat-head{
-    border-bottom: 1px solid lightgray;
+
+.chat-head {
+    border-bottom: 1px solid var(--border);
 }
-.chat-user-message{
-    background-color: whitesmoke;
-    color: rgb(54, 54, 54);
+
+.chat-user-message {
+    color: var(--text);
+    background-color: var(--border-reduce);
     border-radius: 0.5em;
-    border: 1px solid gainsboro;
+    border: 1px solid var(--border-reduce);
 }
+
+.editor-container {
+    border: 1px solid var(--border);
+    border-radius: 0.5em;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .editor-language,
-.editor-container{
-    border: 1px solid lightgray;
+.editor-container {
+    border: 1px solid var(--border);
 }
-.multi-code-container{
-    background-color: rgb(224, 224, 224);
-    color: rgb(83, 83, 83);
+
+.multi-code-container {
+    background-color: var(--border-reduce);
+    color: var(--text);
     border-radius: 0.25em;
     cursor: pointer;
+
 }
-.multi-code{
+
+.multi-code {
     font-size: 0.9em;
     text-align: center;
     padding: 0.5em 1em;
     width: 10em;
-    transition: background-color 0.5s;
     border-radius: 0.5em;
 }
-.code-active{
-    background-color: white;
+
+.code-active {
+    background-color: var(--primary-color);
+    color: var(--text);
 }
-.editor-execution{
-    background-color: rgb(224, 224, 224);
-    color: rgb(83, 83, 83);
-    border-radius: 0.25em;
+
+.editor-execution {
+    background-color: var(--border-reduce);
+    color: var(--text);
     cursor: pointer;
 }
-.execute-st{
-    color: black;
-    background-color: lightgrey;
+.editor-execution:hover {
+    opacity: 0.8;
 }
+
+
 .download-toggle,
-.execute-st:hover{
-    background-color: rgb(194, 194, 194);
+.execute-st:hover {
+    background-color: rgb(75, 75, 75);
+    color: var(--secondary-color);
 }
-.dr-item-color{
-    background-color: blue;
+.dropdown-download{
+    background-color: var(--primary-color);
+    border: 1px solid var(--border);
+    color:var(--text);
 }
-.compilation-display{
-    backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.5);
+.dropdown-download li:hover{
+    background-color: var(--border-reduce);
 }
-.compilation-body{
-    height: 100%;
+.compilation-modal{
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border);
 }
-.message-description{
-    text-align: center;
-    padding-bottom: 1em;
-}
-.result-danger{
-    color: rgb(204, 0, 0);
-    font-size: large;
-    font-weight: 500;
-}
-.result-success{
-    color: rgb(0, 173, 0);
-    font-size: 1.5em;
-    font-weight: 500;
-}
-.ll-container{
+.ll-container {
     padding-block: 5em;
     height: 610px;
     align-items: center;

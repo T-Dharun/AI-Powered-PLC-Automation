@@ -5,17 +5,16 @@ import Editor from '../components/workspace/Editor';
 import "./style.css";
 
 const Workspace = () => {
-    const [stCode,setStCode]=useState('');
-    console.log(stCode);
+    const [stCode, setStCode] = useState('');
     return (
         <>
-            <section className="" style={{ height: '100vh' }}>
-                <nav className='d-flex justify-content-center navbar-container'><Navbar/></nav>
-                <div className='workspace-container d-flex justify-content-around  py-5'> 
-                <section className='ws-container d-flex flex-column flex-lg-row w-100 justify-content-between'> 
-                    <section className='h-100 work-chat'><Chat stCode={stCode} setStCode={setStCode}/></section>
-                    <section className='h-100 work-editor'><Editor stCode={stCode} setStCode={setStCode}/></section>
-                </section>
+            <section className="h-screen">
+                <nav className='flex justify-center navbar-workspace'><Navbar/></nav>
+                <div className='workspace-container flex justify-around items-center'> 
+                    <section className='ws-container flex flex-col lg:flex-row w-full justify-between'> 
+                        <section className='h-full work-chat'><Chat stCode={stCode} setStCode={setStCode}/></section>
+                        <section className='h-full work-editor'><Editor stCode={stCode} setStCode={setStCode}/></section>
+                    </section>
                 </div>
             </section>
         </>
