@@ -18,11 +18,11 @@ const Chat = ({ stCode, setStCode }) => {
     
     const handleStCodeChange = async () => {
         setHistory([...history, { user: prompt, response: true }]);
-        //const res= await generateCode(prompt);
-        const res={message:true};
+        const res= await generateCode(prompt);
+        //const res={message:true};
         if (res.message) {
-            const response ={text:"VAR\n    TemperatureSensor AT %IW0 : INT;\n    Light AT %QX0.2 : BOOL;\nEND_VAR\n\nIF TemperatureSensor > 100 THEN\n    Light := TRUE;\nELSE\n    Light := FALSE;\nEND_IF;\n"};
-            //const response=res.response;
+            //const response ={text:"VAR\n    TemperatureSensor AT %IW0 : INT;\n    Light AT %QX0.2 : BOOL;\nEND_VAR\n\nIF TemperatureSensor > 100 THEN\n    Light := TRUE;\nELSE\n    Light := FALSE;\nEND_IF;\n"};
+            const response=res.response;
             console.log(response);
             setStCode(response.text||"");
             setHistory(prevHistory => {
