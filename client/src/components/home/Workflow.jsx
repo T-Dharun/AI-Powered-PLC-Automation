@@ -1,34 +1,36 @@
 import "./home.css";
-const workdata=[
+const workdata = [
     {
-        title:'unified Dashboard',
-        message:'There are n number of works  in our lab right away okay'
+        title: 'AI-Powered PLC Code Generation',
+        message: 'Transforms natural language prompts into Structured Text (ST) and Ladder Logic for seamless industrial automation.'
     },
     {
-        title:'unified Dashboard',
-        message:'There are n number of works  in our lab right away okay'
+        title: 'Intelligent Code Editor',
+        message: 'Provides a real-time, syntax-aware Structured Text editor with built-in debugging for error-free PLC programming.'
     },
     {
-        title:'unified Dashboard',
-        message:'There are n number of works  in our lab right away okay'
+        title: 'AST-Based Compilation & Validation',
+        message: 'Converts ST code into an Abstract Syntax Tree (AST), ensuring logical consistency and eliminating syntax errors before execution.'
     },
     {
-        title:'unified Dashboard',
-        message:'There are n number of works  in our lab right away okay'
+        title: 'Dynamic PLC Execution via OpenPLC',
+        message: 'Deploys the AI-generated PLC programs to OpenPLC hardware (Arduino + relays), enabling real-time control of industrial processes.'
     },
     {
-        title:'unified Dashboard',
-        message:'There are n number of works  in our lab right away okay'
+        title: 'Ladder Logic Editor with Drag & Drop',
+        message: 'Automatically converts ST code into Ladder Logic, allowing intuitive modifications with an interactive graphical interface.'
     },
     {
-        title:'unified Dashboard',
-        message:'There are n number of works  in our lab right away okay'
-    },
-]
+        title: 'Seamless Integration with Industrial Systems',
+        message: 'Supports standard PLC communication protocols, ensuring compatibility with industrial controllers and automation workflows.'
+    }
+];
+
 const Workflow=()=>{
     return(
         <>
             <main className="flex items-center justify-center workflow flex-col">
+                <section className="project-title">AI powered PLC Automation</section>
                 <section className="py-15 flex flex-col gap-5">
                     <div className="text-2xl text-red-400 font-bold text-center">Integrated Ecosystem</div>
                     <div className="text-4xl font-bold text-white text-center">One Step to reduce yours couple of hours</div>

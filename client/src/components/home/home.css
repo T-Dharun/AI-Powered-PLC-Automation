@@ -1,3 +1,11 @@
+.project-title{
+    font-size: 4em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff6b6b, #ffb86c, #50fa7b);
+    -webkit-background-clip: text;
+    padding-bottom: 3em;
+    -webkit-text-fill-color: transparent;
+}
 .workflow{
     width: min(100vw, 90em);
     
