@@ -4,6 +4,7 @@ import { tokenize, parseTokens } from "../../utils/stParser";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import "./workspace.css";
 import { useTheme } from "../theme/ThemeContext";
+import { uploadCode } from "./generate";
 
 const Editor = ({ stCode, setStCode }) => {
     const [ast, setAst] = useState(null);
@@ -34,6 +35,13 @@ const Editor = ({ stCode, setStCode }) => {
             if (!tokens.length) throw new Error("No valid tokens found!");
             const parsedAst = parseTokens(tokens);
             setAst(parsedAst);
+            try{
+              let value=uploadCode(ast);
+              console.log(value);
+            }
+            catch(err){
+              console.log('Error in uploading code:',err);
+            }
         } catch (err) {
             setError(`${err.message}`);
         }
